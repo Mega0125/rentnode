@@ -6,6 +6,8 @@ import Belt from "../components/belt/Belt";
 import Savetime from "../components/savetime/Savetime";
 import Metamask from "../components/metamask/Metamask";
 import Faq from "../components/faq/Faq";
+import ContactUs from "../components/contansUs/ContactUs";
+import Footer from "../components/footer/footer";
 import { LandImg } from "../constant/images";
 
 const Landing = () => {
@@ -31,6 +33,8 @@ const Landing = () => {
       <Savetime />
       <Metamask />
       <Faq />
+      <ContactUs />
+      <Footer />
     </Wrapper>
   )
 }

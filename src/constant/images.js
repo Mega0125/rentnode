@@ -8,6 +8,8 @@ import Decoration1 from '../assets/decoration1.svg';
 import underline from '../assets/underline.svg';
 import shine from '../assets/shine.svg';
 import direct from '../assets/direct.svg';
+import directdown from '../assets/directdown.svg';
+import underlineyellow from '../assets/underlineyellow.svg'
 
 export const ResbtnImg = Resbtn;
 export const LandImg = Land;
@@ -19,3 +21,5 @@ export const Decoration1Img = Decoration1;
 export const UnderlineImg = underline;
 export const ShineImg = shine;
 export const DirectImg = direct;
+export const DirectdownImg = directdown;
+export const UnderlineyellowImg = underlineyellow;
