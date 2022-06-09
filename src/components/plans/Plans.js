@@ -1,19 +1,23 @@
-import { toBeInTheDOM } from "@testing-library/jest-dom/dist/matchers";
-import React, { useTransition } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { plans } from "../../constant/plans";
 
 const Plans = () => {
-
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
   return (
     <Wrapper>
-      <TitleDiv>
+      <TitleDiv data-aos="fade-down" data-aos-duration="1000">
         <h1>Choose <span>your plan</span></h1>
       </TitleDiv>
       <PlanList>
         {
           plans.map((item) => (
-            <Plan key={item.id} btnColor={item.color} flag={0}>
+            <Plan key={item.id} btnColor={item.color} flag={0} data-aos={item.animation} data-aos-duration="1000">
               <span>{item.name}</span>
               <span>Daily per {item.name}</span>
               <span>{item.price}</span>
@@ -69,6 +73,9 @@ export const PlanList = styled.div`
   flex-wrap: wrap;
   margin: auto;
   gap: 20px;
+  & div:nth-child(2) {
+    /* box-shadow: 3px 3px 5px 5px lightgrey; */
+  }
 `;
 
 export const Plan = styled.div`
@@ -77,6 +84,12 @@ export const Plan = styled.div`
   text-align: center;
   color: rgb(79, 79, 79);
   font-family: Montserrat;
+  padding: 10px;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 5px 5px lightgrey;
+  }
   & span:nth-child(1) {
     color: rgb(55, 53, 53);
     margin: 0px 0px 0.35em;

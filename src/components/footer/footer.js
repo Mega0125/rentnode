@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { header_json } from '../../constant/header';
@@ -6,9 +8,13 @@ import { header_json } from '../../constant/header';
 import { UnderlineyellowImg } from "../../constant/images";
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <Wrapper>
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="1000">
         <div>
           {
             header_json.map((item, index) => (

@@ -2,6 +2,7 @@ export const plans = [
   {
     id: 1,
     name: "Daily",
+    animation: "fade-right",
     price: "$10",
     contents: [
       "Private node",
@@ -15,6 +16,7 @@ export const plans = [
   {
     id: 2,
     name: "Weekly",
+    animation: "fade-up",
     price: "$25",
     contents: [
       "Private node",
@@ -28,6 +30,7 @@ export const plans = [
   {
     id: 3,
     name: "Monthly",
+    animation: "fade-left",
     price: "$75",
     contents: [
       "Private node",
@@ -44,6 +47,7 @@ export const SaveTime = [
   {
     id: 1,
     name: "3 months",
+    animation: "fade-right",
     title: 'Save 2 weeks',
     price: "$185",
     contents: [
@@ -58,6 +62,7 @@ export const SaveTime = [
   {
     id: 2,
     name: "6 months",
+    animation: "fade-up",
     title: "Save 1 month",
     price: "$375",
     contents: [
@@ -72,6 +77,7 @@ export const SaveTime = [
   {
     id: 3,
     name: "1 year",
+    animation: "fade-left",
     title: "Save 2 months",
     price: "$750px",
     contents: [

@@ -1,22 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Json data
 import { header_json } from "../../constant/header";
 import { ResbtnImg } from "../../constant/images";
 import { contact } from "../../constant/contact";
 
+
 const Header = () => {
   const [isRes, setRes] = useState(false);
-
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
   return (
     <Wrapper>
-      <LeftDIV>
+      <LeftDIV data-aos="fade-up">
         <Marquee>
         </Marquee>
       </LeftDIV>
-      <RightDIV>
+      <RightDIV data-aos="fade-up">
         <MainNav>
           {header_json.map((item) => (
             <Link to={item.link} key={item.key}>{item.name}</Link>
@@ -85,9 +91,9 @@ const MainNav = styled.div`
     text-decoration: none;
     font-family: Montserrat;
     background-color: transparent;
-    border: 1px solid rgb(55, 53, 53);
+    border: 1px solid white;
     font-size: 12px;
-    color: rgb(55, 53, 53);
+    color: white;
     padding: 7px 30px;
     border-radius: 20px;
     font-weight: 500;
@@ -154,7 +160,7 @@ const ResNav = styled.ul`
   }
   li a {
     text-decoration: none;
-    color: rgb(55, 53, 53);
+    color: white;
   }
 `
 

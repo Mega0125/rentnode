@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import styled from "styled-components";
 
 import { UnderlineImg, ShineImg, DirectImg } from "../../constant/images";
@@ -13,20 +15,17 @@ const Faq = () => {
     setPlease(!please)
   }
   useEffect(() => {
-    // let temp = [];
-    // Faqs.map((item) => {
-    //   temp.push(true);
-    // })
-    // setFlags(temp);
+    AOS.init();
+    AOS.refresh();
   }, [flags, please])
   return (
     <Wrapper>
       <LeftDiv>
         <Title>
-          <p>Frequently</p>
-          <p>Asked<img src={UnderlineImg}></img></p>
-          <p>Questions</p>
-          <p>
+          <p data-aos="zoom-in" data-aos-duration="1000">Frequently</p>
+          <p data-aos="zoom-in" data-aos-duration="1000">Asked<img src={UnderlineImg}></img></p>
+          <p data-aos="zoom-in" data-aos-duration="1000">Questions</p>
+          <p data-aos="zoom-in" data-aos-duration="1000">
             RentNode is a blockchain-as-a-service solution
             that lets users get access to full Nodes. The service
             provides a high-quality infrastructure that is quick,
@@ -41,7 +40,7 @@ const Faq = () => {
       <RightDiv>
         {
           Faqs.map((item, index) => (
-            <FaqItem flag={flags[index]} key={index} onClick={() => changeFlags(index)}>
+            <FaqItem flag={flags[index]} key={index} onClick={() => changeFlags(index)} data-aos="flip-down" data-aos-duration="1000">
               <div>
                 <p> {item[0]} </p>
                 <div>

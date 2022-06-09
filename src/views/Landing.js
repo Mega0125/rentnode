@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import ReactPlayer from 'react-player';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Header from "../components/header/Header";
 import Plans from "../components/plans/Plans";
 import Belt from "../components/belt/Belt";
@@ -8,15 +11,18 @@ import Metamask from "../components/metamask/Metamask";
 import Faq from "../components/faq/Faq";
 import ContactUs from "../components/contansUs/ContactUs";
 import Footer from "../components/footer/footer";
-import { LandImg } from "../constant/images";
-
+import { LandImg, RentnodeImg, Video1, BgImg } from "../constant/images";
 const Landing = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
   return (
     <Wrapper>
       <Header />
       <Land>
-        <LandLeftDiv>
-          <h1>RENT NODE</h1>
+        <LandLeftDiv data-aos="fade-right" data-aos-duration="1000">
+          <img src={RentnodeImg}></img>
           <span>
             We make it ridiculously easy to get access to private nodes. No strings attached.
           </span>
@@ -24,7 +30,7 @@ const Landing = () => {
             Video Guide
           </button>
         </LandLeftDiv>
-        <LandRightDiv>
+        <LandRightDiv data-aos="fade-left" data-aos-duration="1000">
           <img src={LandImg} />
         </LandRightDiv>
       </Land>
@@ -35,12 +41,18 @@ const Landing = () => {
       <Faq />
       <ContactUs />
       <Footer />
+      <ReactPlayer
+        className='react-player'
+        url={Video1}
+        width='400px'
+        height='300px'
+      />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  
+  background: url(${BgImg});
 `;
 
 const Land = styled.div`
@@ -66,24 +78,11 @@ const LandLeftDiv = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 20px;
-  h1 {
-    font-size: 70px;
-    font-family: Montserrat;
-    font-weight: 300;
-    line-height: 1.167;
-    white-space: nowrap;
-    font-weight: bold;
-    color: #373535;
-    margin-bottom: 40px;
-    @media (max-width: 740px) {
-      font-size: 50px;
-    }
-    @media (max-width: 320px) {
-      font-size: 30px;
-    }
+  & img:nth-child(1) {
+    margin-bottom: 50px;
   }
   span {
-    color: #373535;
+    color: white;
     font-size: 16px;
     font-family: Montserrat;
     font-weight: 400;
@@ -92,16 +91,21 @@ const LandLeftDiv = styled.div`
   }
   button {
     padding: 10px 30px;
-    color: #6F6C90 !important;
-    width: 200px!important;
-    height: 56px!important;
-    font-size: 14px!important;
-    font-family: Montserrat!important;
-    border-color: #6F6C90 !important;
-    border-radius: 40px!important;
+    width: 200px;
+    height: 56px;
+    font-size: 14px;
+    font-family: Montserrat;
+    border-color: white ;
+    background-color: transparent;
+    color: white;
+    border-radius: 40px;
     font-weight: bold;
     margin-top: 40px;
+    margin-left: 30%;
     display: inline-block;
+    @media (max-width: 500px) {
+      margin-left: 20%;
+    }
   }
   @media (max-width: 740px) {
     width: 100%;

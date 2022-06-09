@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import styled from "styled-components";
 
 import { MetamaskImg } from "../../constant/images";
 import { Decoration1Img } from "../../constant/images";
 
 const Metamask = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
   return (
     <Wrapper>
-      <LeftDiv>
+      <LeftDiv data-aos="flip-left" data-aos-duration="1500">
         <img src={MetamaskImg}></img>
       </LeftDiv>
-      <RightDiv>
+      <RightDiv data-aos="flip-right" data-aos-duration="1500">
         <span>1 month</span>
         <span> $20
           <img src={Decoration1Img} />
@@ -34,6 +40,7 @@ const Wrapper = styled.div`
   padding: 6% 8%;
   background-color: #EAFFEA;
   margin: 0;
+  margin-top: 100px;
 `
 
 const LeftDiv = styled.div`
@@ -49,6 +56,8 @@ const RightDiv = styled.div`
   text-align: center;
   color: #373535;
   width: 50%;
+  justify-content: center;
+  align-items: center;
   & span:nth-child(1) {
     margin: 0px;
     font-family: Montserrat;
@@ -67,13 +76,18 @@ const RightDiv = styled.div`
     font-size: 60px!important;
     font-family: Montserrat!important;
     position: relative;
+    width: auto;
     font-weight: bold;
+    width: 30%;
   }
 
   & span:nth-child(2) img {
     position: absolute;
     top: -20px;
-    right: -50px;
+    left: 50px;
+    @media (max-width: 475px) {
+      display: none;
+    }
   }
 
   & p:nth-child(3) {
@@ -85,6 +99,7 @@ const RightDiv = styled.div`
       font-size: 48px;
       font-weight: bold;
       line-height: 10px;
+      line-height: 30px;
     }
   }
   & div:nth-child(4) {

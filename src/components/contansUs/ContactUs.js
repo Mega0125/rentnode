@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { DirectdownImg } from "../../constant/images";
 
 const ContactUs = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
   return (
     <Wrapper>
-      <Container>
+      <Container data-aos="fade-down" data-aos-duration="1000">
         <p>Write us right now for more awesome info</p>
         <p>We will help you in everything you need<img src={DirectdownImg}></img></p>
         <a href="https://discord.gg/anDJ2wpnSz"><span>Contact us</span></a>
