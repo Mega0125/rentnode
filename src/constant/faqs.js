@@ -21,7 +21,7 @@ export const Faqs = [
   ],
   [
     "Where are our nodes located?",
-    "our nodes are located in Germany, Falkenstein"
+    "Scandinavia instead of Germany, Falkenstein"
   ],
   [
     "How can I pay?",

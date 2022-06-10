@@ -29,7 +29,7 @@ const Savetime = () => {
                 ))
               }
               <button>
-                Other Now
+                Order Now
               </button>
             </Plan>
           ))

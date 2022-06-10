@@ -13,7 +13,7 @@ const Prices = () => {
     AOS.refresh();
   }, [])
   return (
-    <Wrapper>
+    <Wrapper id="plans">
       <Container>
         <Divs>
           {/* <div>
