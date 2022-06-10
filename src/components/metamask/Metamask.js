@@ -38,7 +38,6 @@ const Wrapper = styled.div`
   width: 100%;
   justify-content: center;
   padding: 6% 8%;
-  background-color: #EAFFEA;
   margin: 0;
   margin-top: 100px;
 `
@@ -54,7 +53,7 @@ const RightDiv = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: #373535;
+  color: white;
   width: 50%;
   justify-content: center;
   align-items: center;
@@ -104,23 +103,24 @@ const RightDiv = styled.div`
   }
   & div:nth-child(4) {
     button {
-      color: #6F6C90;
+      color: white;
       padding: 10px 30px;
-      width: 200px!important;
-      height: 56px!important;
-      font-size: 15px!important;
-      font-family: Montserrat!important;
+      width: 200px;
+      height: 56px;
+      font-size: 15px;
+      font-family: Montserrat;
       font-weight: bold;
-      border-color: #6F6C90 !important;
-      border-radius: 40px!important;
+      border-color: white;
+      border-radius: 40px;
+      background-color: transparent;
       margin-top: 40px;
       display: inline-block;
       margin: 10px;
     }
     & button:nth-child(2) {
-      background-color: rgb(255, 203, 60);
-      border: 0;
-      color: rgb(55, 53, 53);;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid white;
+      color: white;
     }
   }
 `

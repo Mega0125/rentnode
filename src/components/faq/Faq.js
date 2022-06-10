@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import styled from "styled-components";
 
-import { UnderlineImg, ShineImg, DirectImg } from "../../constant/images";
+import { UnderlineImg, PlusImg, DirectImg } from "../../constant/images";
 import { Faqs } from "../../constant/faqs";
 
 const Faq = () => {
@@ -19,7 +19,7 @@ const Faq = () => {
     AOS.refresh();
   }, [flags, please])
   return (
-    <Wrapper>
+    <Wrapper id="faq">
       <LeftDiv>
         <Title>
           <p data-aos="zoom-in" data-aos-duration="1000">Frequently</p>
@@ -33,7 +33,7 @@ const Faq = () => {
             support.
           </p>
           <div>
-            <img src={DirectImg}></img>
+            <img src={DirectImg} style={{ color: "white" }}></img>
           </div>
         </Title>
       </LeftDiv>
@@ -42,9 +42,11 @@ const Faq = () => {
           Faqs.map((item, index) => (
             <FaqItem flag={flags[index]} key={index} onClick={() => changeFlags(index)} data-aos="flip-down" data-aos-duration="1000">
               <div>
-                <p> {item[0]} </p>
                 <div>
-                  <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="AddRoundedIcon"><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+                  <p> {item[0]} </p>
+                </div>
+                <div>
+                  <img src={PlusImg}></img>
                 </div>
               </div>
               <div><p>
@@ -59,7 +61,7 @@ const Faq = () => {
 }
 
 const Wrapper = styled.div`
-  background-color: #C8BCFF;
+  background-color: transparent;
   padding: 6% 8%;
   display: flex;
   box-sizing: border-box;
@@ -85,7 +87,7 @@ const LeftDiv = styled.div`
 `
 
 const Title = styled.div`
-  color: #373535;
+  color: white;
   font-family: Montserrat;
   line-height: 1.167;
   font-size: 70px;
@@ -149,16 +151,16 @@ const RightDiv = styled.div`
 const FaqItem = styled.div`
   padding: 14px 0!important;
   cursor: pointer;
-  background-color: #c8bcff;
+  background-color: transparent;
   border-bottom: 2px solid #dbd5f7;
   border-top: 2px solid #dbd5f7;
   box-shadow: none;
-  color: #373535;
+  color: white;
   & div:nth-child(1) {
     display: flex;
     -webkit-box-flex: 1;
     flex-grow: 1;
-    transition: margin 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: all 0.5s;
     justify-content: space-between;
     align-items: center;
     font-size: 26px;
@@ -166,25 +168,29 @@ const FaqItem = styled.div`
     line-height: 1.5;
     text-align: left;
     font-family: Montserrat;
+    & div:nth-child(1) {
+      width: 80%;
+    }
     & div:nth-child(2) {
       width: 32px;
       display: flex;
       height: 32px;
       border-radius: 20px;
-      color: rgba(0, 0, 0, 0.54);
+      color: rgba(255, 255, 255, 0.54);
     }
     &:hover div:nth-child(2) {
-      background-color: white;
+      transform: scale(1.1);
+      transform: ${props => props.flag ? "rotate(0)" : "rotate(45deg)"};
     }
   }
   & div:nth-child(2) {
     box-sizing: border-box;
-    color: #373535!important;
+    color: rgba(255, 255, 255, 0.54);
     font-size: 14px;
     overflow: hidden;
     transition: all 0.3s ease-out;
     p {
-      display: ${props => props.flag ? "none" : "black"}!important;
+      display: ${props => props.flag ? "none" : "black"};
       margin: 0px;
       font-family: Montserrat;
       font-weight: 400;

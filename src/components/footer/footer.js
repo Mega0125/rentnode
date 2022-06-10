@@ -19,7 +19,7 @@ const Footer = () => {
           {
             header_json.map((item, index) => (
               <span>
-                <Link style={LinkStyle} to={item.link} key={index}>{item.name}</Link>
+                <a style={LinkStyle} href={item.link} key={index}>{item.name}</a>
               </span>
             ))
           }
@@ -38,7 +38,7 @@ const Footer = () => {
 
 const LinkStyle = {
   textDecoration: "none",
-  color: "#373535",
+  color: "white",
   fontWeight: "bold"
 }
 const Wrapper = styled.div`
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column ;
   justify-content: space-between;
-  background-color: #BEFFBD;
+  background: linear-gradient(97.24deg, #001B46 4.78%, #020818 106.01%);
 `
 
 const Container = styled.div`
@@ -81,7 +81,7 @@ const Container = styled.div`
     gap: 20px;
     a {
       text-decoration: none;
-      color: #373535;
+      color: white;
       font-family: Montserrat;
       font-size: 12px;
     }
@@ -91,7 +91,7 @@ const Container = styled.div`
     margin: 0px;
     font-family: Montserrat;
     font-weight: 400;
-    color: #828282;
+    color: white;
     font-size: 12px;
     margin-top: 10%;
   }

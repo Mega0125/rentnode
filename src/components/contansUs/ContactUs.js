@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   -webkit-box-pack: center;
   justify-content: center;
   padding: 0 8px;
-  background-color: white;
+  background-color: transparent;
 `
 
 const Container = styled.div` 
@@ -41,7 +41,7 @@ const Container = styled.div`
   flex-direction: column !important;
   justify-content: space-evenly;
   font-family: Montserrat;
-  color: #373535;
+  color: white;
   & p:nth-child(1) {
     font-weight: 800;
     line-height: 1.167;
@@ -64,19 +64,20 @@ const Container = styled.div`
     }
   }
   a {
-    background-color: #BEFFBD;
     text-decoration: none;
     width: 200px;
     height: 56px;
     font-size: 16px;
+    border: 2px solid white;
     font-family: Montserrat;
-    font-weight: bold;
+    font-weight: ;
     border-radius: 40px;
-    color: #373535;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    background: rgba(255,255,255,0.1);
   }
 `
 

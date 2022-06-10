@@ -12,7 +12,8 @@ import directdown from '../assets/directdown.svg';
 import underlineyellow from '../assets/underlineyellow.svg'
 import rentnode from '../assets/rentnode.png';
 import background from '../assets/background.png'
-import Video from '../assets/video.mp4';
+import Plus from '../assets/plus.svg';
+import logo from '../assets/logo.png';
 
 export const ResbtnImg = Resbtn;
 export const LandImg = Land;
@@ -27,5 +28,6 @@ export const DirectImg = direct;
 export const DirectdownImg = directdown;
 export const UnderlineyellowImg = underlineyellow;
 export const RentnodeImg = rentnode;
-export const Video1 = Video;
+export const PlusImg = Plus;
 export const BgImg = background;
+export const LogoImg = logo;

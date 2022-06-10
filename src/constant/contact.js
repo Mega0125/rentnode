@@ -9,6 +9,6 @@ export const contact = [
     id: 2,
     name: "Discord",
     color: "rgb(255, 203, 60)",
-    url: "https://t.me/RentNode"
+    url: "https://discord.com/invite/anDJ2wpnSz"
   }
 ]

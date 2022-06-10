@@ -20,7 +20,7 @@ const Landing = () => {
   return (
     <Wrapper>
       <Header />
-      <Land>
+      <Land id="home">
         <LandLeftDiv data-aos="fade-right" data-aos-duration="1000">
           <img src={RentnodeImg}></img>
           <span>
@@ -34,19 +34,13 @@ const Landing = () => {
           <img src={LandImg} />
         </LandRightDiv>
       </Land>
-      <Plans />
+      <Plans></Plans>
       <Belt />
       <Savetime />
       <Metamask />
       <Faq />
       <ContactUs />
       <Footer />
-      <ReactPlayer
-        className='react-player'
-        url={Video1}
-        width='400px'
-        height='300px'
-      />
     </Wrapper>
   )
 }

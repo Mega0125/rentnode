@@ -18,7 +18,6 @@ const Savetime = () => {
           SaveTime.map((item) => (
             <Plan key={item.id} btnColor={item.color} flag={1} data-aos={item.animation} data-aos-duration="1000">
               <span>{item.name}</span>
-              <span>{item.title}</span>
               <span>{item.price}</span>
               {
                 item.contents.map((item1) => (

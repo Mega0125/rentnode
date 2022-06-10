@@ -18,7 +18,8 @@ const belt = () => {
 }
 
 const Wrapper = styled.div`
-  background-color: #FFCB3C;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
   padding: 30px;
   font-size: 69px;
@@ -30,7 +31,7 @@ const Wrapper = styled.div`
     font-family: Montserrat;
     font-weight: 400;
     line-height: 1.167;
-    color: #373535;
+    color: white;
     position: relative;
   }
 
@@ -56,7 +57,7 @@ const Wrapper = styled.div`
     font-family: Montserrat;
     font-weight: bold;
     line-height: 1.167;
-    color: #373535;
+    color: white;
     position: relative;
   }
 

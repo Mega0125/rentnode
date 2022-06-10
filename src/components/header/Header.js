@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 
 // Json data
 import { header_json } from "../../constant/header";
-import { ResbtnImg } from "../../constant/images";
+import { ResbtnImg, LogoImg } from "../../constant/images";
 import { contact } from "../../constant/contact";
 
 
@@ -19,13 +19,12 @@ const Header = () => {
   return (
     <Wrapper>
       <LeftDIV data-aos="fade-up">
-        <Marquee>
-        </Marquee>
+        <img src={LogoImg}></img>
       </LeftDIV>
       <RightDIV data-aos="fade-up">
         <MainNav>
           {header_json.map((item) => (
-            <Link to={item.link} key={item.key}>{item.name}</Link>
+            <a href={item.link} key={item.key}>{item.name}</a>
           ))}
         </MainNav>
       </RightDIV>
@@ -44,7 +43,7 @@ const Header = () => {
         <ResBotDiv>
           {
             contact.map((item) => (
-              <Link to={item.url} key={item.id} style={{ backgroundColor: item.color }}>{item.name}</Link>
+              <a href={item.url} key={item.id} style={{ backgroundColor: item.color }}>{item.name}</a>
             ))
           }
         </ResBotDiv>
@@ -65,19 +64,16 @@ const Wrapper = styled.div`
 `;
 
 const LeftDIV = styled.div`
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  /* border-left: 1px solid black;
+  border-right: 1px solid black; */
   width: 400px;
-  height: 35px;
+  height: 40px;
   overflow: hidden;
   position: relative;
   margin-left: 20px;
   @media (max-width: 485px) {
     width: 70%;
   }
-`
-const Marquee = styled.div`
-
 `
 
 const RightDIV = styled.div`
@@ -107,6 +103,8 @@ const MainNav = styled.div`
 `
 const Resbtn = styled.div`
   display: none;
+  position: fixed;
+  right: 10px;
   @media (max-width: 750px) {
     display: block;
   }
@@ -118,13 +116,15 @@ const Resbtn = styled.div`
 `;
 
 const ResDiv = styled.div`
-  position: absolute;
+  z-index: 1;
   flex-direction: column;
+  position: fixed;
+  overflow-y: auto;
   right: 0;
   top: 0;
   width: 240px;
   height: 100vh;
-  background-color: rgb(234,249,231);
+  background: linear-gradient(136.53deg,#1638BA 0%,#2A3375 97.47%);
   display: ${props =>
     props.disp ? 'flex' : 'none'
   };
@@ -133,6 +133,7 @@ const ResDiv = styled.div`
 
 const ResTopDiv = styled.div`
   width: 100%;
+  height: 100vh;
 `
 
 const CloseBtn = styled.div`
@@ -140,6 +141,7 @@ const CloseBtn = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
+  padding-right: 30px;
 `;
 
 const ResNav = styled.ul`
