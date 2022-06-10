@@ -21,7 +21,6 @@ const Metamask = () => {
         <span> $20
           <img src={Decoration1Img} />
         </span>
-        <p>Private node <span>for Metamask</span></p>
         <div>
           <button>Order Now</button>
         </div>
@@ -100,7 +99,7 @@ const RightDiv = styled.div`
       line-height: 30px;
     }
   }
-  & div:nth-child(4) {
+  & div:nth-child(3) {
     button {
       color: white;
       padding: 10px 30px;

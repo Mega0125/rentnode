@@ -37,7 +37,7 @@ const Landing = () => {
       <Prices />
       <Belt />
       <Savetime />
-      <Metamask />
+      {/* <Metamask /> */}
       <Faq />
       <ContactUs />
       <Footer />
