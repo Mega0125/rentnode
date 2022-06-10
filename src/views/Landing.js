@@ -34,7 +34,6 @@ const Landing = () => {
           <img src={LandImg} />
         </LandRightDiv>
       </Land>
-      <Plans></Plans>
       <Belt />
       <Savetime />
       <Metamask />

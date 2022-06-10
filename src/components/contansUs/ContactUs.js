@@ -70,7 +70,6 @@ const Container = styled.div`
     font-size: 16px;
     border: 2px solid white;
     font-family: Montserrat;
-    font-weight: ;
     border-radius: 40px;
     color: white;
     display: flex;

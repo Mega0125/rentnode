@@ -9,7 +9,7 @@ export const plans = [
       "No hidden fees",
       "Fast and secure",
       "24/7 technical support",
-      "Available BSC/ETH/CRO"
+      "Available ETH/BSC/POLY"
     ],
     color: "#C8BCFF"
   },
@@ -23,7 +23,7 @@ export const plans = [
       "No hidden fees",
       "Fast and secure",
       "24/7 technical support",
-      "Available BSC/ETH/CRO"
+      "Available ETH/BSC/POLY"
     ],
     color: "#BEFFBD"
   },
@@ -37,7 +37,7 @@ export const plans = [
       "No hidden fees",
       "Fast and secure",
       "24/7 technical support",
-      "Available BSC/ETH/CRO"
+      "Available ETH/BSC/POLY"
     ],
     color: "#C8BCFF"
   }
@@ -55,7 +55,7 @@ export const SaveTime = [
       "No hidden fees",
       "Fast and secure",
       "24/7 technical support",
-      "Available BSC/ETH/CRO"
+      "Available ETH/BSC/POLY"
     ],
     color: "#BEFFBD"
   },
@@ -70,7 +70,7 @@ export const SaveTime = [
       "No hidden fees",
       "Fast and secure",
       "24/7 technical support",
-      "Available BSC/ETH/CRO"
+      "Available ETH/BSC/POLY"
     ],
     color: "#C8BCFF"
   },
@@ -85,7 +85,7 @@ export const SaveTime = [
       "No hidden fees",
       "Fast and secure",
       "24/7 technical support",
-      "Available BSC/ETH/CRO"
+      "Available ETH/BSC/POLY"
     ],
     color: "#BEFFBD"
   },
@@ -100,7 +100,7 @@ export const SaveTime = [
       "No hidden fees",
       "Fast and secure",
       "24/7 technical support",
-      "Available BSC/ETH/CRO"
+      "Available ETH/BSC/POLY"
     ],
     color: "#C8BCFF"
   }
