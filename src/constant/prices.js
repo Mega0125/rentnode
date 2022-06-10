@@ -11,7 +11,7 @@ export const prices = {
       animation: "fade-left"
     },
     {
-      desc: "2 node with unlimited calls/requests",
+      desc: "3 node with unlimited calls/requests",
       price: 125,
       animation: "fade-right"
     },
@@ -35,6 +35,7 @@ export const prices = {
     {
       desc: "1 VM and 3 node",
       price: 175,
+
       animation: "fade-down"
     },
     {
