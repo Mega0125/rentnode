@@ -64,6 +64,7 @@ const Divs = styled.div`
   margin-top: 50px;
   div {
     text-align: center;
+    margin-top: 40px;
     width: 250px;
     background: linear-gradient(136.53deg, #1638BA 0%, #2A3375 97.47%);
     border-radius: 26px; 
