@@ -11,6 +11,8 @@ import Metamask from "../components/metamask/Metamask";
 import Faq from "../components/faq/Faq";
 import ContactUs from "../components/contansUs/ContactUs";
 import Footer from "../components/footer/footer";
+import Prices from "../components/prices/Prices";
+
 import { LandImg, RentnodeImg, Video1, BgImg } from "../constant/images";
 const Landing = () => {
   useEffect(() => {
@@ -26,14 +28,13 @@ const Landing = () => {
           <span>
             We make it ridiculously easy to get access to private nodes. No strings attached.
           </span>
-          <button>
-            Video Guide
-          </button>
         </LandLeftDiv>
         <LandRightDiv data-aos="fade-left" data-aos-duration="1000">
           <img src={LandImg} />
         </LandRightDiv>
       </Land>
+      {/* <Plans /> */}
+      <Prices />
       <Belt />
       <Savetime />
       <Metamask />

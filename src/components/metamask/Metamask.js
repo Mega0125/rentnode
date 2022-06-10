@@ -23,7 +23,6 @@ const Metamask = () => {
         </span>
         <p>Private node <span>for Metamask</span></p>
         <div>
-          <button>Video Guide</button>
           <button>Order Now</button>
         </div>
       </RightDiv>
@@ -116,11 +115,6 @@ const RightDiv = styled.div`
       margin-top: 40px;
       display: inline-block;
       margin: 10px;
-    }
-    & button:nth-child(2) {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid white;
-      color: white;
     }
   }
 `

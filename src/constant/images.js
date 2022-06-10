@@ -14,6 +14,8 @@ import rentnode from '../assets/rentnode.png';
 import background from '../assets/background.png'
 import Plus from '../assets/plus.svg';
 import logo from '../assets/logo.png';
+import cryptonode from '../assets/cryptonode.png';
+import cryptonode_vm from '../assets/cryptonode-vm.png';
 
 export const ResbtnImg = Resbtn;
 export const LandImg = Land;
@@ -31,3 +33,5 @@ export const RentnodeImg = rentnode;
 export const PlusImg = Plus;
 export const BgImg = background;
 export const LogoImg = logo;
+export const CryptonodeImg = cryptonode;
+export const cryptonode_vmImg = cryptonode_vm;

@@ -30,7 +30,7 @@ export const plans = [
   {
     id: 3,
     name: "Monthly",
-    animation: "fade-left",
+    animation: "fade-up",
     price: "$75",
     contents: [
       "Private node",
@@ -47,7 +47,7 @@ export const SaveTime = [
   {
     id: 1,
     name: "1 months",
-    animation: "fade-up",
+    animation: "fade-right",
     title: "Save 1 month",
     price: "$50",
     contents: [
@@ -62,7 +62,7 @@ export const SaveTime = [
   {
     id: 2,
     name: "3 months",
-    animation: "fade-right",
+    animation: "fade-up",
     title: 'Save 2 weeks',
     price: "$125",
     contents: [
