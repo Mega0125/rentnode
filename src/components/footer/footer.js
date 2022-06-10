@@ -27,10 +27,9 @@ const Footer = () => {
         </div>
 
         <div>
-          <a href="https://t.me/RentNode">Telegram</a>
           <a href="https://discord.gg/anDJ2wpnSz">Discord</a>
         </div>
-        <p>Copyright © 2022 Rent node. All rights reserved.</p>
+        <p>Copyright © 2022 SpeedyNodes. All rights reserved.</p>
       </Container>
     </Wrapper>
   )

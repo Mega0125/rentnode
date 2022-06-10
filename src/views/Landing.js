@@ -47,6 +47,7 @@ const Landing = () => {
 
 const Wrapper = styled.div`
   background: url(${BgImg});
+  background-size: cover;
 `;
 
 const Land = styled.div`

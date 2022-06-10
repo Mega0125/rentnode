@@ -26,7 +26,7 @@ const Faq = () => {
           <p data-aos="zoom-in" data-aos-duration="1000">Asked<img src={UnderlineImg}></img></p>
           <p data-aos="zoom-in" data-aos-duration="1000">Questions</p>
           <p data-aos="zoom-in" data-aos-duration="1000">
-            RentNode is a blockchain-as-a-service solution
+            SpeedyNodes is a blockchain-as-a-service solution
             that lets users get access to full Nodes. The service
             provides a high-quality infrastructure that is quick,
             cost-effective, and reliable with 24/7 customer
